@@ -13,7 +13,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
+       <%-- <div>
             <asp:CheckBoxList ID="CheckBoxList1" runat="server" RepeatDirection="Horizontal">
                 
                 <asp:ListItem Text="Diploma" Value ="1"></asp:ListItem>
@@ -24,8 +24,23 @@
         </div>
         <p>
             &nbsp;</p>
-        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Button" />
+        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Button" />--%>
+        
+    <div >
+        <div class="title">Select Qualification</div>
 
+        <asp:CheckBoxList ID="CheckBoxList1" runat="server" CssClass="checkbox-list" RepeatDirection="Horizontal">
+            <asp:ListItem Text="Diploma" Value ="1"></asp:ListItem>
+            <asp:ListItem Text="Graduate" Value="2"></asp:ListItem>
+            <asp:ListItem Text="Post Graduate" Value="3"></asp:ListItem>
+            <asp:ListItem Text="Doctorate" Value="4"></asp:ListItem>
+        </asp:CheckBoxList>
+
+        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Submit" CssClass="styled-btn" />
+    </div>
+        <div>
+            <asp:Label ID="display" runat="server"></asp:Label>
+        </div>
     </form>
 </body>
 </html>

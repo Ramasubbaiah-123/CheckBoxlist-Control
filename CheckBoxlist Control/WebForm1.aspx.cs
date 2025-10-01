@@ -12,17 +12,18 @@ namespace CheckBoxlist_Control
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-
+            string lbltext = string.Empty;
             foreach (ListItem li in CheckBoxList1.Items)
             {
                 if (li.Selected)
                 {
-                    Response.Write("Text = " + li.Text + ", ");
-                    Response.Write("Value = " + li.Value + ", ");
-                    Response.Write("Index = " + CheckBoxList1.Items.IndexOf(li));
-                    Response.Write("<br/>");
+                    lbltext += "Text = " + li.Text + ", ";
+                    lbltext += "Value = " + li.Value + ", ";
+                    lbltext += "Index = " + CheckBoxList1.Items.IndexOf(li);
+                    lbltext += "<br/>";
                 }
             }
+            display.Text = lbltext;
         }
     }
 }
